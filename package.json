@@ -1,0 +1,39 @@
+{
+  "name": "helpjuice-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Helpjuice: let Claude, Cursor and other AI agents search, read, write and audit your Helpjuice knowledge base.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "helpjuice",
+    "knowledge-base",
+    "documentation",
+    "ai-agents",
+    "claude"
+  ],
+  "type": "module",
+  "bin": {
+    "helpjuice-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npm run build && node --test test/client.test.mjs test/stdio.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.5",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "typescript": "5.6.3"
+  },
+  "license": "MIT"
+}
